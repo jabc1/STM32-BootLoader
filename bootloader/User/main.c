@@ -14,7 +14,9 @@
 #include "stm32_iap.h"
 #include <stm32f10x.h>
 #include <core_cm3.h>
-
+#include "delay.h"
+#include "mcp1316.h"
+#include "timer.h"
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -40,6 +42,9 @@ int main(void)
 	unsigned short data = 0;
 	uint32_t	*p_VectorValue;
 	SystemInit();//系统时钟初始化
+	delay_init();	    	 					//延时函数初始化
+	MCP1316_init();
+	TIM3_Int_Init(4999,7199);
 	USART_Configuration();//串口1初始化
 	printf("\x0c\0");   //超级终端清屏
 	printf("\r\n*******************************************************************************");

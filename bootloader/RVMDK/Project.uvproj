@@ -618,6 +618,31 @@
               <FileType>1</FileType>
               <FilePath>..\User\interface.c</FilePath>
             </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\sys.c</FilePath>
+            </File>
+            <File>
+              <FileName>mcp1316.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\mcp1316.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\led.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
