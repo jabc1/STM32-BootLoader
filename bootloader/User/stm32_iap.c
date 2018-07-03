@@ -86,7 +86,7 @@ FLASH_Status ErasePage(uint32_t StartPage,uint32_t EndPage)
 uint32_t FLASH_If_Erase_APP1()
 {
 	
-  uint32_t UserStartPage = 0x08008000,PageCount = 240, i = 0;
+  uint32_t UserStartPage = 0x08008000,PageCount = 176, i = 0;
 
   for(i = 0x08008000; i < (UserStartPage+PageCount*0x800); i += 0x800)
   {
@@ -109,7 +109,7 @@ uint32_t FLASH_If_Erase_APP1()
   */
 uint32_t FLASH_If_Erase_APP2()
 {
- uint32_t UserStartPage = 0x08080000,PageCount = 256, i = 0;
+ uint32_t UserStartPage = 0x08080000,PageCount = 176, i = 0;
 
   for(i = 0x08080000; i < (UserStartPage+PageCount*0x800); i += 0x800)
   {
@@ -129,7 +129,7 @@ uint32_t FLASH_IF_APP2_COPY_TO_APP1(void)
 {
 	unsigned int app1addr  = 0x08008000, app2addr = 0x08080000;
 	unsigned int app2data;
-	while (app1addr < 0x0807FFFF)
+	while (app1addr < 0x0805FFFF)
 	{
 		app2data = *(unsigned int *)(app2addr);
 		
@@ -159,7 +159,7 @@ int compareAPP1AndAPP2()
 {
 	unsigned int app1addr  = 0x08008000, app2addr = 0x08080000;
 	unsigned int app1data,app2data;
-	while (app1addr < 0x0807FFFF)
+	while (app1addr < 0x0805FFFF)
 	{
 		app2data = *(unsigned int *)(app2addr);
 		app1data = *(unsigned int *)(app1addr);
